@@ -653,7 +653,13 @@ tab-label {
   padding: 6px 0;
   margin-bottom: 0.25em;
 }
-
+/* Hacky fix for sites with no favicon. 
+Firefox uses an SVG file placeholder instead of the usual <img> favicons.
+For some reason overriding the font-size propety fixes this behavior
+and I don't care enough to ask why. */
+tab-favicon {
+font-size: 0px;
+}
 .favicon {
   --favicon-size: var(--tab-item-substance-height);
   display: inline-block;
